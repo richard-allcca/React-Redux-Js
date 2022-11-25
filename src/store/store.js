@@ -1,10 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { counterSlice } from "./slices/counter";
+import { pokemonSlice } from './slices/pokemon';
 
 
 export const store = configureStore({
    reducer: {
-      counter: counterSlice.reducer // este punto reducer es para evitar la export default de reducer en el counteSlice ln/27
+      // evita el export de reducer en el counterSlice ln/28
+      counter: counterSlice.reducer,
+      pokemons: pokemonSlice.reducer
    }
 })
 

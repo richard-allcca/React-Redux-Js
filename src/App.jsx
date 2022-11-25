@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 import { useDispatch, useSelector } from 'react-redux'
 
-import { increment, incrementByAmount } from './store/slices/counter';
+import { decrement, increment, incrementByAmount } from './store/slices/counter';
 
 import reactLogo from './assets/react.svg'
 import './App.css'
@@ -27,8 +27,14 @@ function App() {
          </div>
          <h1>Vite + React</h1>
          <div className="card">
+            <button onClick={ () => dispatch(increment()) }>
+               count + 1 is { count }
+            </button>
             <button onClick={ () => dispatch(incrementByAmount(5)) }>
-               count is { count }
+               count + 5 is { count }
+            </button>
+            <button onClick={ () => dispatch(decrement()) }>
+               count - 5 is { count }
             </button>
          </div>
       </div>

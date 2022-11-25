@@ -23,5 +23,6 @@ export const counterSlice = createSlice({
 
 export const { increment, decrement, incrementByAmount } = counterSlice.actions
 
-// NOTE - esta exportación es la recomendada por la doc de redux
+// REVIEW - esta exportación es la recomendada por la doc pero en el store la llamamos en la ln/7 por eso esta comentada aquí
+
 // export default counterSlice.reducer
