@@ -1,44 +1,31 @@
-import { useState } from 'react'
+import './App.css';
 
-import { useDispatch, useSelector } from 'react-redux'
-
-import { decrement, increment, incrementByAmount } from './store/slices/counter';
-
-import reactLogo from './assets/react.svg'
-import './App.css'
+import Count from './components/Count';
+import Pokemon from './components/Pokemon';
+import TodosRtk from './components/TodosRtk';
+import TodoRtk from './components/TodoRtk';
 
 function App() {
 
-   // const [ count, setCount ] = useState(0) // modo origin
-   // const {count} = useSelector((state) => state.counter);// modo fer
 
-   const count = useSelector((state) => state.counter.value);
-   const dispatch = useDispatch();
+  return (
+    <div className="App">
 
-   return (
-      <div className="App">
-         <div>
-            <a href="https://vitejs.dev" target="_blank">
-               <img src="/vite.svg" className="logo" alt="Vite logo" />
-            </a>
-            <a href="https://reactjs.org" target="_blank">
-               <img src={ reactLogo } className="logo react" alt="React logo" />
-            </a>
-         </div>
-         <h1>Vite + React</h1>
-         <div className="card">
-            <button onClick={ () => dispatch(increment()) }>
-               count + 1 is { count }
-            </button>
-            <button onClick={ () => dispatch(incrementByAmount(5)) }>
-               count + 5 is { count }
-            </button>
-            <button onClick={ () => dispatch(decrement()) }>
-               count - 5 is { count }
-            </button>
-         </div>
-      </div>
-   )
+      {/* Slice para manejo de estado comun */ }
+      <Count />
+
+      {/* Slice con Thunks para peticiones Async */ }
+      <Pokemon />
+
+      {/* RTK Query - Once Todo */ }
+      <TodoRtk />
+
+      {/* RTK Query - list of Todo */ }
+      <TodosRtk />
+
+
+    </div>
+  );
 }
 
-export default App
+export default App;

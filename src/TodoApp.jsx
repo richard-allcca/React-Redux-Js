@@ -1,24 +1,23 @@
-import React from 'react'
-import { Rtk } from './components/Rtk'
-import { Thunks } from './components/Thunks'
-import { useGetTodoByIdQuery, useGetTodosQuery } from './store/apis/todosApi'
+import React from 'react';
+import { Rtk } from './components/Rtk';
+import { Thunks } from './components/Thunks';
 
 const TodoApp = () => {
 
 
 
-   return (
-      <>
-         <h1>Todos - RTK Query</h1>
-         <hr />
+  return (
+    <>
+      <h1>Todos - RTK Query</h1>
+      <hr />
 
-         <Rtk />
+      <Rtk />
 
-         <hr />
+      <hr />
 
-         <Thunks />
-      </>
-   )
-}
+      <Thunks />
+    </>
+  );
+};
 
-export default TodoApp
+export default TodoApp;

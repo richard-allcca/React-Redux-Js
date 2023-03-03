@@ -1,31 +1,29 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 
-import { Provider } from 'react-redux'
-import { ApiProvider } from '@reduxjs/toolkit/query/react'
+import { Provider } from 'react-redux';
+import { ApiProvider } from '@reduxjs/toolkit/query/react';
 
-import { store } from './store'
-import { apiSlice } from './store/apis/todosApi'
+import { store } from './store';
 
-import App from './App'
-import AppPokemon from './AppPokemon'
-import TodoApp from './TodoApp'
+import App from './App';
 
-import './index.css'
+import './index.css';
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-   <React.StrictMode>
-      <Provider store={ store } >
+  <React.StrictMode>
+    <Provider store={ store } >
 
-         {/* <App /> */ }
+      <App />
 
-         {/* <AppPokemon /> */ }
+      {/* <ApiProvider api={ apiSlice }>
+        <TodoApp />
+      </ApiProvider> */}
 
-         <ApiProvider api={ apiSlice }>
-            <TodoApp />
-         </ApiProvider>
+    </Provider>
+  </React.StrictMode>
+);
 
-      </Provider>
-   </React.StrictMode>
-)
+
+//  TODO - crea un main para cada ejemplo de uso de slice
