@@ -1,10 +1,12 @@
+import { useGetTodosQuery } from '../store/slices/todos/todosSlice';
 
-
-import { useGetTodoByIdQuery, useGetTodosQuery } from '../store/sliceRtk/todosSlice';
+// NOTE - Obtener lista de TODOS
 
 const TodosRtk = () => {
 
-  const { data } = useGetTodosQuery();
+  // Consolea resp para que veas todo lo que trae de la petición
+  const resp = useGetTodosQuery();
+  const { data, isLoading } = resp;
 
 
   return (

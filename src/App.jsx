@@ -11,16 +11,16 @@ function App() {
   return (
     <div className="App">
 
-      {/* Slice para manejo de estado comun */ }
+      {/* Slice Común para manejo de estado */ }
       <Count />
 
       {/* Slice con Thunks para peticiones Async */ }
       <Pokemon />
 
-      {/* RTK Query - Once Todo */ }
+      {/* RTK Query (peticiones) - Once Todo */ }
       <TodoRtk />
 
-      {/* RTK Query - list of Todo */ }
+      {/* RTK Query (peticiones) - list of Todo */ }
       <TodosRtk />
 
 

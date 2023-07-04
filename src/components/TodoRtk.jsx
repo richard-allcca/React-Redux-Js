@@ -1,11 +1,14 @@
 import { useState } from "react";
-import { useGetTodoByIdQuery } from "../store/sliceRtk/todosSlice";
+import { useGetTodoByIdQuery } from "../store/slices/todos/todosSlice";
 
+// NOTE - Obtener un TODO por id
 
 const TodoRtk = () => {
   const [idTodo, setIdTodo] = useState(1);
 
-  const { data } = useGetTodoByIdQuery(idTodo);
+  // Consolea resp para que veas todo lo que trae de la petición
+  const resp = useGetTodoByIdQuery(idTodo);
+  const {data, isLoading} = resp;
 
   function onNextTodo() {
     setIdTodo(idTodo + 1);

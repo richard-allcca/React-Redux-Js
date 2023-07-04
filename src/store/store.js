@@ -1,10 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
 
 import { counterSlice } from "./slices/counter";
+
 import { pokemonSlice } from './slices/pokemon';
 
-// RTK
-import { todosSlice } from './sliceRtk/todosSlice';
+import { todosSlice } from './slices/todos/todosSlice';
 
 
 export const store = configureStore({
@@ -12,10 +12,10 @@ export const store = configureStore({
     counter: counterSlice.reducer,
     pokemons: pokemonSlice.reducer,
 
-    // NOTE - todosApi as todosSlice
+    // RTK Declara el nombre del reducer y sus reducer (funciones)
     [todosSlice.reducerPath]: todosSlice.reducer,
   },
-  // middleware solo para uso con RTK (no se debe importar el getDefaultMiddleware)
+  // middleware solo para uso con RTK
   middleware: (getDefaultMiddleware) => getDefaultMiddleware()
     .concat(todosSlice.middleware)
 });
