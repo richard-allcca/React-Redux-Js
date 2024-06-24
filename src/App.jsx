@@ -2,8 +2,8 @@ import './App.css';
 
 import Count from './components/Count';
 import Pokemon from './components/Pokemon';
-import TodosRtk from './components/TodosRtk';
-import TodoRtk from './components/TodoRtk';
+import TodoWithRtk from './components/TodoWithRtk';
+import TodosWithRtk from './components/TodosWithRtk';
 
 function App() {
 
@@ -18,10 +18,10 @@ function App() {
       <Pokemon />
 
       {/* RTK Query (peticiones) - Once Todo */ }
-      <TodoRtk />
+      <TodoWithRtk />
 
       {/* RTK Query (peticiones) - list of Todo */ }
-      <TodosRtk />
+      <TodosWithRtk />
 
 
     </div>

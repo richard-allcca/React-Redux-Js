@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { useGetTodoByIdQuery } from "../store/slices/todos/todosSlice";
 
-// NOTE - Obtener un TODO por id
+// NOTE - Componente para obtener un TODO por id con RTK
 
-const TodoRtk = () => {
+const TodoWithRtk = () => {
   const [idTodo, setIdTodo] = useState(1);
 
   // Consolea resp para que veas todo lo que trae de la petición
@@ -37,4 +37,4 @@ const TodoRtk = () => {
   );
 };
 
-export default TodoRtk;
+export default TodoWithRtk;

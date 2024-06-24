@@ -1,8 +1,8 @@
 import { useGetTodosQuery } from '../store/slices/todos/todosSlice';
 
-// NOTE - Obtener lista de TODOS
+// NOTE - Componente para obtener lista de TODOS
 
-const TodosRtk = () => {
+const TodosWithRtk = () => {
 
   // Consolea resp para que veas todo lo que trae de la petición
   const resp = useGetTodosQuery();
@@ -29,4 +29,4 @@ const TodosRtk = () => {
   );
 };
 
-export default TodosRtk;
+export default TodosWithRtk;

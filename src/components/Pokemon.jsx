@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getPokemons } from './../store/slices/pokemon/pokemonThunks';
 
 const Pokemon = () => {
-  // NOTE - Los estados se toman de la misma forma que un slice normal
   const { pokemons, loading, page } = useSelector(state => state.pokemons);
 
   // NOTE - el dispatch por ser una consulta de API se hace a un Thunks
