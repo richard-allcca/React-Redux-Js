@@ -17,7 +17,6 @@ const Pokemon = () => {
     <>
       <hr />
       <h1>PokemonApp</h1>
-      <hr />
 
       <span>Loading: { loading ? 'True' : 'False' }</span>
 

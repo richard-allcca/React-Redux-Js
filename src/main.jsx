@@ -17,10 +17,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 
       <App />
 
-      {/* <ApiProvider api={ apiSlice }>
-        <TodoApp />
-      </ApiProvider> */}
-
     </Provider>
   </React.StrictMode>
 );

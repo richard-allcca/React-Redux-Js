@@ -4,7 +4,7 @@ import { useGetTodosQuery } from '../store/slices/todos/todosSlice';
 
 const TodosWithRtk = () => {
 
-  // Consolea resp para que veas todo lo que trae de la petición
+  // Pinta en consola resp para que veas todo lo que trae de la petición
   const resp = useGetTodosQuery();
   const { data, isLoading } = resp;
 
@@ -13,7 +13,6 @@ const TodosWithRtk = () => {
     <>
       <hr />
       <h1>Lista de To Do</h1>
-      <hr />
 
       <ul>
         {

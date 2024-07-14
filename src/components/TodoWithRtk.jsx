@@ -6,7 +6,7 @@ import { useGetTodoByIdQuery } from "../store/slices/todos/todosSlice";
 const TodoWithRtk = () => {
   const [idTodo, setIdTodo] = useState(1);
 
-  // Consolea resp para que veas todo lo que trae de la petición
+  // Pinta en consola resp para que veas todo lo que trae de la petición
   const resp = useGetTodoByIdQuery(idTodo);
   const {data, isLoading} = resp;
 
@@ -23,7 +23,6 @@ const TodoWithRtk = () => {
     <>
       <hr />
       <h1>To Do por Id</h1>
-      <hr />
 
       <ul>
         {

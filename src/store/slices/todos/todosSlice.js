@@ -11,20 +11,20 @@ export const todosSlice = createApi({
     baseUrl: 'http://jsonplaceholder.typicode.com'
   }),
 
-  // Endpoist = Funciones para peticiones de la información
+  // Endpoints = Funciones para peticiones de la información
   endpoints: (builder) => ({
 
     getTodos: builder.query({
       query: () => '/todos',// esto se concatena a baseUrl
-      providesTags: ["Todos"]
+      providesTags: ["Todos"] // asigna un tag a la data para identificarla
     }),
     getTodoById: builder.query({
       query: (id) => `/todos/${id}`, // esto se concatena a baseUrl
-      invalidatesTags: ["Todos"]
+      invalidatesTags: ["Todos"] // elimina el tag de la data para que se actualize en general
     })
   })
 });
 
 // NOTE - Se crean customHooks con el nombre de las funciones en los endpoints: "use<nameFunction>Query"
-// En estos se obtiene la info necesaria de la patición como: Erros, Carga, isLoading etc...
+// En estos se obtiene la info necesaria de la petición como: Errors, Carga, isLoading etc...
 export const { useGetTodosQuery, useGetTodoByIdQuery } = todosSlice;
