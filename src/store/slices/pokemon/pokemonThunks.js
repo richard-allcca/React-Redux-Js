@@ -1,7 +1,7 @@
 import { setPokemons, loading } from "./pokemonSlice";
 import { pokemonApi } from '../../../services/pokemonApi';
 
-// NOTE - Las consultas echas aqui modifican el "state" mediante los actions(dispatch) que se importan desde el Slice
+// NOTE - Las consultas echas aquí modifican el "state" mediante los actions(dispatch) que se importan desde el Slice
 
 export const getPokemons = (page = 0) => {
   return async (dispatch, getState) => {
